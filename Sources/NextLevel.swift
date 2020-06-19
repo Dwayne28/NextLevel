@@ -1340,7 +1340,8 @@ extension NextLevel {
         
         if let previewConnection = self.previewLayer.connection {
             if previewConnection.isVideoOrientationSupported && previewConnection.videoOrientation != currentOrientation {
-                previewConnection.videoOrientation = currentOrientation
+                previewConnection.videoOrientation = .portrait //currentOrientation
+                //TODO: configurable
                 didChangeOrientation = true
             }
         }
